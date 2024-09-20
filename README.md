@@ -1,6 +1,7 @@
 # NutmegHub
 
 #ディレクトリ構造
+<pre>
 +---app(ページに関するファイルが入っている)
 |   |   layout.tsx(初期のレイアウト)
 |   |   page.tsx(初期ページ)
@@ -21,3 +22,4 @@
 \---fonts(フォントを格納するフォルダ)
         GeistMonoVF.woff
         GeistVF.woff
+</pre>
