@@ -1,4 +1,4 @@
-import styles from "@/app/Styles/post.module.css";
+import styles from "@/app/Styles/shop.module.css";
 
 export default function Page() {
     return (
