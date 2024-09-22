@@ -15,13 +15,7 @@ const Login = () => {
 
     return (
         <div>
-            <br />
-            <br />
             {status != "authenticated" ? (
-                <ul>
-                    <li>Login with Google</li>
-                    <ul>
-                        <li>
                             <form className="flex flex-col" action={dispatchGoogle}>
                                 <button
                                     type="submit"
@@ -30,22 +24,7 @@ const Login = () => {
                                 </button>
                                 <p>{errorMsgGoogle}</p>
                             </form>
-                        </li>
-                    </ul>
-                </ul>
             ) : (
-                <ul>
-                    <li>You are signed as below</li>
-                    <ul>
-                        <li>Your name</li>
-                        <ul>
-                            <li>{session.user?.name}</li>
-                        </ul>
-                        <li>Your email</li>
-                        <ul>
-                            <li>{session.user?.email}</li>
-                        </ul>
-                    </ul>
                     <li>
                         <button
                             onClick={() => signOut()}
@@ -53,9 +32,7 @@ const Login = () => {
                             Google Sign Out
                         </button>
                     </li>
-                </ul>
             )}
-            <br />
         </div>
     );
 };
