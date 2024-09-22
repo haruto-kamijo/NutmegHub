@@ -26,26 +26,26 @@ const Header = ({ title }: HeaderProps) => {
                     <button onClick={toggleHamburger}
                             className="flex items-center px-2 py-2 border rounded bg-[#C2F8E711] text-[#C2F8E799] border-[#C2F8E799] hover:text-white hover:border-[#C2F8E7]">
                         <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <title>Menu</title>
+                            <title>NUTMEG HUB</title>
                             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
                         </svg>
                     </button>
                 </div>
                 <div className={`${visible} w-full block flex-grow lg:flex lg:items-center lg:w-auto`}>
                     <div className="text-right lg:flex-grow">
-                        <Link href="./Timeline"
+                        <Link href="../Timeline"
                               className="block mt-4 lg:inline-block lg:mt-0 text-white text-center hover:text-teal-200 lg:ml-8 mx-6">
                             タイムライン
                         </Link>
-                        <Link href="./TimeLine/Post"
+                        <Link href="../Timeline/Post"
                               className="block mt-4 lg:inline-block lg:mt-0 text-white text-center hover:text-teal-200 mx-6">
                             投稿
                         </Link>
-                        <Link href="./Timeline/Shop"
+                        <Link href="../Timeline/Shop"
                               className="block mt-4 lg:inline-block lg:mt-0 text-white text-center hover:text-teal-200 mx-6">
                             ショップ
                         </Link>
-                        <Link href="./Setting"
+                        <Link href="../Setting"
                               className="block mt-4 lg:inline-block lg:mt-0 text-white text-center hover:text-teal-200 mx-6">
                             設定
                         </Link>
