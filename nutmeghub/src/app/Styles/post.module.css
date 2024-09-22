@@ -2,3 +2,12 @@
     position: absolute;
     background-color: red;
 }
+.ButtonStyle{
+    background-color: aqua;
+}
+.OverlayStyle{
+    background-color: cornflowerblue;
+}
+.ModalStyle{
+    background-color: darkgoldenrod;
+}
