@@ -1,13 +1,12 @@
-import styles from "@/app/Styles/home.module.css";
+import AuthProvider from "@/app/provider/NextAuth";
+import Login from "@/app/components/Login";
 
-export default function Page() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-          <h1>NUTMEG HUB</h1>
-          <button>get started</button>
-          <button>login</button>
-      </main>
-    </div>
-  );
-}
+const Home = () => {
+    return (
+        <AuthProvider>
+            <Login />
+        </AuthProvider>
+    );
+};
+
+export default Home;
