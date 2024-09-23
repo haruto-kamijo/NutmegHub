@@ -4,13 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import {useState} from 'react'
 
-
-
-type HeaderProps = {
-    title: string
-}
-
-const Header = ({ title }: HeaderProps) => {
+const Header = () => {
     // visibleの値を変えることでメニューを表示・非表示させる
     const [visible, setVisible] = useState('visible')
 
@@ -33,6 +27,10 @@ const Header = ({ title }: HeaderProps) => {
                 </div>
                 <div className={`${visible} w-full block flex-grow lg:flex lg:items-center lg:w-auto`}>
                     <div className="text-right lg:flex-grow">
+                        <Link href="../"
+                              className="block mt-4 lg:inline-block lg:mt-0 text-white text-center hover:text-teal-200 lg:ml-8 mx-6">
+                            ログイン
+                        </Link>
                         <Link href="../Timeline"
                               className="block mt-4 lg:inline-block lg:mt-0 text-white text-center hover:text-teal-200 lg:ml-8 mx-6">
                             タイムライン
