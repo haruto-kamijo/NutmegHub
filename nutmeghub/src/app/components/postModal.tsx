@@ -23,7 +23,6 @@ const PostModal = ({ buttonLabel }: ModalProps) => {
             {isOpen && (
                 <div className={styles.OverlayStyle}>
                     <div className={styles.ModalStyle}>
-
                         <form action={postAction}>
                             <input type="text" name="name"/>
                             <button type="submit">送信</button>
