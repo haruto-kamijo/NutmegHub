@@ -6,7 +6,7 @@ import PostModal from "@/app/components/postModal";
 export default function Page() {
     return (
         <div>
-            <Header></Header>
+            <Header title={"NUTMEG HUB"}></Header>
             <main className={styles.page}>
                 <h1>Timeline</h1>
                 <PostModal buttonLabel="+" />
