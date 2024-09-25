@@ -2,6 +2,7 @@
 
 import { googleAuthenticate } from "./loginAction";
 import { useFormState } from "react-dom";
+// @ts-ignore
 import { useSession, signOut } from "next-auth/react";
 import styles from '../Styles/login.module.css';
 
@@ -25,13 +26,13 @@ const Login = () => {
                                 <p>{errorMsgGoogle}</p>
                             </form>
             ) : (
-                    <li>
-                        <button
+                    <div>
+                        <button className={styles.button}
                             onClick={() => signOut()}
                         >
                             Google Sign Out
                         </button>
-                    </li>
+                    </div>
             )}
         </div>
     );
