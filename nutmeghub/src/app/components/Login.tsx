@@ -1,9 +1,9 @@
 "use client";
 
-import scss from "./page.module.scss";
 import { googleAuthenticate } from "./loginAction";
 import { useFormState } from "react-dom";
 import { useSession, signOut } from "next-auth/react";
+import styles from '../Styles/login.module.css';
 
 const Login = () => {
     const { data: session, status } = useSession({ required: false });
@@ -17,7 +17,7 @@ const Login = () => {
         <div>
             {status != "authenticated" ? (
                             <form className="flex flex-col" action={dispatchGoogle}>
-                                <button
+                                <button className={styles.button}
                                     type="submit"
                                 >
                                     Google Sign In

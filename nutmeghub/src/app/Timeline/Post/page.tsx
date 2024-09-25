@@ -1,5 +1,5 @@
 import styles from "@/app/Styles/post.module.css";
-import Header from "@/app/components/header";
+import Header from "@/app/components/Header";
 
 export default function Page() {
     return (
