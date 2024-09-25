@@ -2,7 +2,6 @@ import "@/app/Styles/globals.css"
 import styles from "@/app/Styles/timeline.module.css";
 import Header from "@/app/components/header";
 import PostModal from "@/app/components/postModal";
-import {prisma} from "../../../prisma/seed";
 import {PrismaClient} from "@prisma/client";
 
 
