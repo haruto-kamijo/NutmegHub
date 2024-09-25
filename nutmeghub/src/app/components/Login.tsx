@@ -3,6 +3,7 @@
 import scss from "./page.module.scss";
 import { googleAuthenticate } from "./loginAction";
 import { useFormState } from "react-dom";
+// @ts-ignore
 import { useSession, signOut } from "next-auth/react";
 
 const Login = () => {
