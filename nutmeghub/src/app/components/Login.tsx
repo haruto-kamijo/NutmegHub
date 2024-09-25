@@ -26,13 +26,13 @@ const Login = () => {
                                 <p>{errorMsgGoogle}</p>
                             </form>
             ) : (
-                    <li>
-                        <button
+                    <div>
+                        <button className={styles.button}
                             onClick={() => signOut()}
                         >
                             Google Sign Out
                         </button>
-                    </li>
+                    </div>
             )}
         </div>
     );
