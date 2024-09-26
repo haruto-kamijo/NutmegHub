@@ -1,27 +1,35 @@
 import "@/app/Styles/globals.css"
 import styles from "@/app/Styles/timeline.module.css";
+// @ts-ignore
 import Header from "@/app/components/header";
 import PostModal from "@/app/components/postModal";
 import {PrismaClient} from "@prisma/client";
-
 
 export default async function Page() {
     // Postテーブルから全てデータを取得
     const prisma = new PrismaClient();
     const posts = prisma.posted.findMany();
     return (
-        <div>
+        <div className={styles.background}>
             <Header></Header>
-            <main className={styles.page}>
-                <h1 className="font-bold text-2xl">Timeline</h1>
+            <div className={styles.tab}>
+                <div className={styles.tabcontents}><p className={styles.ptabcontents}>模擬店</p></div>
+                <div className={styles.tabcontents}><p className={styles.ptabcontents}>イベント</p></div>
+                <div className={styles.tabcontents}><p className={styles.ptabcontents}>展示体験・企業ブース</p></div>
+            </div>
+            <main className={styles.postbox}>
+                {/* <h1 className={styles.timeline}>Timeline</h1> */}
                 {/* Postテーブルの結果の一覧を画面に出力する */}
                 {(await posts).map((post, index) => (
-                    <div key={post.id} className="bg-gray-800 m-2 w-[300px]">
-                        <p>id: {post.id}</p>
-                        <p>name: {post.userId}</p>
-                        <p>image: {post.imageUrl}</p>
-                        <p>position: {post.position}</p>
+                    <div key={post.id}>
+                        <p className={styles.posthiddein}>id: {post.id}</p>
+                        <p className={styles.posthiddein}>name: {post.userId}</p>
+                        <div className={styles.locationBox}>
+                            <img src="/location.png" alt="locationImg" className={styles.imgsize}/>
+                            <p>position: {post.position}</p>
+                        </div>
                         <p>description: {post.description}</p>
+                        <p>image: {post.imageUrl}</p>
                     </div>
                 ))}
                 <PostModal buttonLabel="+"/>

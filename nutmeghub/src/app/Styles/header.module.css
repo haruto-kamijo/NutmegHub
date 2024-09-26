@@ -1,0 +1,19 @@
+.backbround{
+    display: flex;
+    width: 100vw;
+    background-color: #FFD600;
+    color: #ffff;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px;
+    align-items: center;
+}
+.humbergercontents{
+    visibility: hidden;
+}
+.imgs{
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+}

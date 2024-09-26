@@ -5,10 +5,9 @@ const prisma = new PrismaClient();
 
 export const posted = (formData:FormData) => {
     const res: PrismaPromise<Posted>[] = [];
-    formData.forEach( () => {
-        const url = "http://localhost:3000/api/posted";
+    const url = "http://localhost:3000/api/posted";
         // リクエストパラメータ
-        const params = {
+    const params = {
             method: "POST",
             // JSON形式のデータのヘッダー
             headers: {
@@ -23,8 +22,7 @@ export const posted = (formData:FormData) => {
             }),
         };
 
+
         // APIへのリクエスト
         fetch(url, params);
-
-    });
 };
