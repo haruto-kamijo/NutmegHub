@@ -1,6 +1,5 @@
 import {type Posted, PrismaClient, type PrismaPromise} from "@prisma/client";
 
-
 const prisma = new PrismaClient();
 
 export const posted = (formData:FormData) => {
@@ -21,8 +20,6 @@ export const posted = (formData:FormData) => {
                 "position": formData.get("position") as string
             }),
         };
-
-
         // APIへのリクエスト
         fetch(url, params);
 };

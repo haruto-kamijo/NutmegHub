@@ -10,7 +10,7 @@ export default async function Page() {
     const prisma = new PrismaClient();
     const posts = prisma.posted.findMany();
     return (
-        <div className={styles.background}>
+            <div className={styles.background}>
             <Header></Header>
             <div className={styles.tab}>
                 <div className={styles.tabcontents}><p className={styles.ptabcontents}>模擬店</p></div>
@@ -22,19 +22,18 @@ export default async function Page() {
                 {/* Postテーブルの結果の一覧を画面に出力する */}
                 {(await posts).map((post, index) => (
                     <div key={post.id}>
-                        <p className={styles.posthiddein}>id: {post.id}</p>
                         <p className={styles.posthiddein}>name: {post.userId}</p>
                         <div className={styles.locationBox}>
-                            <img src="/location.png" alt="locationImg" className={styles.imgsize}/>
+                            <img src="/pointicon.png" alt="locationImg" className={styles.imgsize}/>
                             <p>position: {post.position}</p>
                         </div>
-                        <p>description: {post.description}</p>
-                        <p>image: {post.imageUrl}</p>
+                        <img src={post.imageUrl} alt="投稿された画像です"></img>
+                        <p>{post.description}</p>
                     </div>
                 ))}
-                <PostModal buttonLabel="+"/>
+                <PostModal buttonLabel="+" />
             </main>
-        </div>
+            </div>
     )
         ;
 }
